@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     WebView web;
     Button btn;
     EditText ed;
-    String adress;
+    String addres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         web = findViewById(R.id.web);
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        web.loadUrl("https://www.google.co.in");
+
 
         btn = findViewById(R.id.btn);
         ed = findViewById(R.id.ed);
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onPush(View view) {
+        addres = ed.getText().toString();
+        web.loadUrl(addres);
 
     }
 }
